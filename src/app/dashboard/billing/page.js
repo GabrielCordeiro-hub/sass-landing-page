@@ -11,7 +11,6 @@ export default function BillingPage() {
   return (
     <div>
       <h2 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '2rem' }}>Billing & Subscription</h2>
-
       <div className="stats-grid">
         <div className="stat-card" style={{ border: '2px solid var(--primary)', background: 'var(--bg-secondary)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
@@ -24,7 +23,6 @@ export default function BillingPage() {
             $29.00 / month • Renewals on Apr 01
           </div>
         </div>
-
         <div className="stat-card">
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
             <span className="badge badge-pending">PAYMENT METHOD</span>
@@ -37,7 +35,6 @@ export default function BillingPage() {
           </div>
         </div>
       </div>
-
       <div className="data-card" style={{ marginTop: '2rem' }}>
         <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '1.5rem' }}>Billing History</h3>
         <div className="table-container">
