@@ -24,6 +24,7 @@ export default function SignupPage() {
           <h1>Create an account</h1>
           <p>Start your 14-day free trial today.</p>
         </div>
+
         <form className="auth-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Full Name</label>
@@ -37,10 +38,25 @@ export default function SignupPage() {
               required 
             />
           </div>
+
+          <div className="form-group">
+            <label htmlFor="email">Email address</label>
+            <input type="email" id="email" className="form-input" placeholder="name@company.com" required />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" className="form-input" placeholder="••••••••" required />
+          </div>
+
           <button type="submit" className="btn-primary" style={{ width: '100%', padding: '1rem', marginTop: '0.5rem' }}>
             Create account
           </button>
         </form>
+
+        <div className="auth-footer">
+          Already have an account? <a href="/login">Sign in</a>
+        </div>
       </div>
     </main>
   );

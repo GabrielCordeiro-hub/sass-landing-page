@@ -41,10 +41,25 @@ export default function LoginPage() {
               required 
             />
           </div>
+
+          <div className="form-group">
+            <label htmlFor="email">Email address</label>
+            <input type="email" id="email" className="form-input" placeholder="name@company.com" required />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" className="form-input" placeholder="••••••••" required />
+          </div>
+
           <button type="submit" className="btn-primary" style={{ width: '100%', padding: '1rem', marginTop: '0.5rem' }}>
             Sign in
           </button>
         </form>
+
+        <div className="auth-footer">
+          Don't have an account? <a href="/signup">Create one for free</a>
+        </div>
       </div>
     </main>
   );
