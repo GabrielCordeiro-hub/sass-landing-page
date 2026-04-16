@@ -13,8 +13,11 @@ export default function ProjectsPage() {
     <div className="data-card">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: '700' }}>Projects</h2>
-        <button className="btn-primary" style={{ padding: '0.6rem 1.25rem', borderRadius: '10px', fontSize: '0.9rem' }}>+ Create New Project</button>
+        <button className="btn-primary" style={{ padding: '0.6rem 1.25rem', borderRadius: '10px', fontSize: '0.9rem' }}>
+          + Create New Project
+        </button>
       </div>
+
       <div className="table-container">
         <table>
           <thead>
@@ -30,14 +33,21 @@ export default function ProjectsPage() {
               <tr key={index}>
                 <td style={{ fontWeight: '600' }}>{project.name}</td>
                 <td>
-                  <span className={`badge ${project.status === 'Active' || project.status === 'Completed' ? 'badge-success' : 'badge-pending'}`}>
+                  <span className={`badge ${
+                    project.status === 'Active' ? 'badge-success' : 
+                    project.status === 'Completed' ? 'badge-success' : 'badge-pending'
+                  }`}>
                     {project.status}
                   </span>
                 </td>
                 <td>
-                   <div style={{ display: 'flex' }}>
-                    {[...Array(project.members)].map((_, i) => (
-                      <div key={i} className="avatar" style={{ width: '24px', height: '24px', marginLeft: i > 0 ? '-8px' : '0', border: '2px solid white' }}></div>
+                  <div style={{ display: 'flex' }}>
+                    {Array.from({ length: project.members }).map((_, i) => (
+                      <div 
+                        key={i} 
+                        className="avatar" 
+                        style={{ width: '24px', height: '24px', marginLeft: i > 0 ? '-8px' : '0', border: '2px solid white' }}
+                      ></div>
                     ))}
                   </div>
                 </td>
